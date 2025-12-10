@@ -8,3 +8,65 @@ body{
 h1{
   color: darkblue;
 }
+.round-timer {
+  font-family: 'Fredoka One', cursive;
+  font-size: xx-large;
+  font-weight: bold;
+  color: rgb(59, 138, 164);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0 5px 10px ;
+  display: flex;
+}
+
+.timer-button {
+  color: rgb(59, 138, 164);
+  width: 100px;
+  height: 70px;
+  align-items: center;
+  justify-content:center;
+  display: flex;
+  margin: auto;
+  font-family: 'Fredoka One', cursive;
+  border-radius: 30px;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/*  start button */
+#startBtn{
+  background-color: b4f7c6;
+}
+#startBtn:hover {
+  background-color: #c9ffd8;
+  transform: scale(1.07);
+}
+
+/*  pause button */
+
+#pauseBtn {
+  background-color: #ffe8a8;
+}
+#pauseBtn:hover {
+  background-color: #fff1c4;
+  transform: scale(1.07);
+}
+/* RESET button */
+#resetBtn {
+  background-color: #ffb3c6;   /* soft pink */
+  color: #7a1028;
+}
+
+#resetBtn:hover {
+  background-color: #ffc6d5;
+  transform: scale(1.07);
+}
+
+/* cute press squish */
+.timer-button button:active {
+  transform: scale(0.93);
+}
