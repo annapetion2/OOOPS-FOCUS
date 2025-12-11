@@ -1,8 +1,9 @@
 body{
   font-family: 'Fredoka one', cursive;
   font-size: xx-large;
-  text-align: center;
   background-color: #e0f0ff;
+  text-align: center;
+
 }
 
 h1{
@@ -55,9 +56,11 @@ h1{
   background-color: #fff1c4;
   transform: scale(1.07);
 }
-/* RESET button */
+
+
+/* RESET button  - soft pink */
 #resetBtn {
-  background-color: #ffb3c6;   /* soft pink */
+  background-color: #ffb3c6;   
   color: #7a1028;
 }
 
@@ -70,3 +73,41 @@ h1{
 .timer-button button:active {
   transform: scale(0.93);
 }
+/*  paragrpah style */
+p{
+  color: rgb(95, 190, 198);
+}
+
+.distraction-list{
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 200;
+  left: 0;
+}
+
+.distraction-list h2{
+  font-family: 'Fredoka One', cursive;
+  text-align: left;
+  padding: 10px;
+  color: darkblue;
+  padding: 0;
+  margin: 0;
+}
+
+.distraction-box{
+  border: #e0f0ff;
+  border-radius: 30px;
+  padding: 30px;
+  width: 300px;
+  height: 300px;
+  background-color: rgb(187, 234, 238);
+}
+
+.distraction-list{
+  border: 0;
+  border-top: 2px solid;
+  margin: 10px;
+}
+
+
