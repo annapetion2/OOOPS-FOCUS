@@ -1,7 +1,7 @@
 body{
   font-family: 'Times New Roman', Times, serif;
-  font-size: xx-large;
-  background-color: rgb(207, 229, 207);
+  font-size: 2.2rem;
+  background-color: rgb(205, 231, 205);
   text-align: center;
 
 }
@@ -20,7 +20,7 @@ h1{
   font-size: xx-large;
   font-weight: bold;
   color: rgb(59, 138, 164);
-  border-radius: 25px;
+  border-radius: 60px;
   width: 300px;
   height: 200px;
   align-items: center;
@@ -32,22 +32,23 @@ h1{
 
 .timer-button  button{
   color: rgb(59, 138, 164);
-  width: 90px;
+  width: 80px;
   height: 90px;
   align-items: center;
   justify-content:center;
   display: flex;
-  margin: 4;
+  margin: 10px;
   font-family: 'Fredoka One', cursive;
-  border-radius: 50px;
+  border-radius: 25px;
   cursor: pointer;
+  font-size: 1.1rem;
 
 }
 .timer-button {
   display: flex;
   justify-content: center;   
   align-items: center;       
-  gap:0;                
+  gap: 3px;;                
   margin-top: 16px;
 }
 
@@ -113,8 +114,8 @@ h1{
 }
 
 .distraction-box{
-  border: 20px solid #A0C38A;
-  border-radius: 40px;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);  border-radius: 40px;
   padding: 30px;
   height: 300px;
   width: 300px;
@@ -133,7 +134,8 @@ h1{
 
 /* Total focus time */
 .focus-time{
-  border: 20px solid #A0C38A;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   border-radius: 40px;
   padding: 30px;
   width: 400px;
@@ -174,7 +176,9 @@ h1{
 
 .tips-hack {
   /* Box Styling */
-  border: 20px solid #A0C38A;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+
   border-radius: 40px;
   padding: 30px;
   width: 300px;
