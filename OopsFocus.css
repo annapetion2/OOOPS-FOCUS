@@ -1,22 +1,28 @@
 body{
-  font-family: 'Fredoka one', cursive;
+  font-family: 'Times New Roman', Times, serif;
   font-size: xx-large;
-  background-color: #e0f0ff;
+  background-color: rgb(207, 229, 207);
   text-align: center;
 
 }
 
+/* the header for the whole page */
 h1{
-  color: darkblue;
+  color: rgb(34, 85, 34);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
 }
+
+
 .round-timer {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Times New Roman', Times, serif;
   font-size: xx-large;
   font-weight: bold;
   color: rgb(59, 138, 164);
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  border-radius: 25px;
+  width: 300px;
+  height: 200px;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -24,23 +30,33 @@ h1{
   display: flex;
 }
 
-.timer-button {
+.timer-button  button{
   color: rgb(59, 138, 164);
-  width: 100px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   align-items: center;
   justify-content:center;
   display: flex;
-  margin: auto;
+  margin: 4;
   font-family: 'Fredoka One', cursive;
-  border-radius: 30px;
-  gap: 8px;
+  border-radius: 50px;
   cursor: pointer;
+
 }
+.timer-button {
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  gap:0;                
+  margin-top: 16px;
+}
+
+
 
 /*  start button */
 #startBtn{
-  background-color: b4f7c6;
+  background-color: rgb(115, 200, 115);
+  color: black;
 }
 #startBtn:hover {
   background-color: #c9ffd8;
@@ -50,7 +66,8 @@ h1{
 /*  pause button */
 
 #pauseBtn {
-  background-color: #ffe8a8;
+  background-color: rgb(222, 222, 149);
+  color: black;
 }
 #pauseBtn:hover {
   background-color: #fff1c4;
@@ -58,10 +75,10 @@ h1{
 }
 
 
-/* RESET button  - soft pink */
+/* RESET button   */
 #resetBtn {
-  background-color: #ffb3c6;   
-  color: #7a1028;
+  background-color: #c15858;   
+  color: rgba(79, 10, 10, 0.991);
 }
 
 #resetBtn:hover {
@@ -73,41 +90,101 @@ h1{
 .timer-button button:active {
   transform: scale(0.93);
 }
-/*  paragrpah style */
-p{
-  color: rgb(95, 190, 198);
-}
+
+
+/* taking care of the distraction part of the code */
+
 
 .distraction-list{
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 200;
-  left: 0;
+  top: 180px;
+  left: 20px;
 }
 
 .distraction-list h2{
-  font-family: 'Fredoka One', cursive;
-  text-align: left;
-  padding: 10px;
-  color: darkblue;
-  padding: 0;
-  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: auto;
+  color: #3E5C3D;
+  font-size: xx-large;
+  margin: 0 0 5px 0
+  
 }
 
 .distraction-box{
-  border: #e0f0ff;
-  border-radius: 30px;
+  border: 20px solid #A0C38A;
+  border-radius: 40px;
+  padding: 30px;
+  height: 300px;
+  width: 300px;
+  margin-top: 5px;
+ 
+
+}
+
+/* All the focus */
+.focus-title {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: auto;
+  color: #3E5C3D;
+  font-size: xx-large;
+}
+
+/* Total focus time */
+.focus-time{
+  border: 20px solid #A0C38A;
+  border-radius: 40px;
+  padding: 30px;
+  width: 400px;
+  text-align: left;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  
+}
+
+.total-time{
+  color:#3E5C3D ;
+  font-size: x-large;
+}
+.session-cal{
+  color: #3E5C3D;
+  font-size: x-large;
+
+}
+.distraction-amount{
+  color: #3E5C3D;
+  font-size: x-large;
+}
+
+/* All the code for the tips and hack section*/
+.tips-title {
+  font-family: 'Times New Roman', Times, serif;
+  color: #3E5C3D;
+  text-align: center; 
+  font-size: xx-large;
+  margin: 0 0 5px 0;
+  position: absolute;
+  top: 180px;
+  right: 20px; 
+  width: 340px;
+}
+
+.tips-hack {
+  /* Box Styling */
+  border: 20px solid #A0C38A;
+  border-radius: 40px;
   padding: 30px;
   width: 300px;
-  height: 300px;
-  background-color: rgb(187, 234, 238);
+  height: 300px; 
+  text-align: center;
+  display: flex; 
+  
+  position: absolute;
+  top: 230px; 
+  right: 20px; 
 }
 
-.distraction-list{
-  border: 0;
-  border-top: 2px solid;
-  margin: 10px;
-}
-
-
+ 
