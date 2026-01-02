@@ -1,7 +1,7 @@
 body{
   font-family: 'Times New Roman', Times, serif;
   font-size: 2.2rem;
-  background-color: rgb(205, 231, 205);
+  background-color: rgb(205, 219, 231);
   text-align: center;
 
 }
@@ -71,7 +71,7 @@ h1{
   color: black;
 }
 #pauseBtn:hover {
-  background-color: #fff1c4;
+  background-color: rgb(222, 222, 149);
   transform: scale(1.07);
 }
 
@@ -79,7 +79,7 @@ h1{
 /* RESET button   */
 #resetBtn {
   background-color: #c15858;   
-  color: rgba(79, 10, 10, 0.991);
+  color: white;
 }
 
 #resetBtn:hover {
@@ -93,9 +93,7 @@ h1{
 }
 
 
-/* taking care of the distraction part of the code */
-
-
+/*  distraction part of the code */
 .distraction-list{
   padding: 0;
   margin: 0;
@@ -113,15 +111,49 @@ h1{
   
 }
 
-.distraction-box{
-  border: none;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);  border-radius: 40px;
-  padding: 30px;
-  height: 300px;
-  width: 300px;
-  margin-top: 5px;
- 
+.distraction-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
+  padding: 12px 14px;
+  margin-bottom: 10px;
+
+  border: none;
+  border-radius: 12px;
+  background: white;
+
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.distraction-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.plus {
+  font-size: 18px;
+  font-weight: 600;
+  color: #888;
+}
+
+.count-val {
+  font-weight: bold;
+  color: #3E5C3D;
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 8px;
+  min-width: 20px;
+  text-align: center;
+  margin-left: auto;
 }
 
 /* All the focus */
