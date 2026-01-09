@@ -17,8 +17,8 @@ h1{
 
 .round-timer {
   font-family: 'Times New Roman', Times, serif;
-  font-size: xx-large;
-  font-weight: bold;
+  font-size: 8rem;
+  font-weight: 200;
   color: rgb(59, 138, 164);
   border-radius: 60px;
   width: 300px;
@@ -28,6 +28,7 @@ h1{
   margin: auto;
   box-shadow: 0 5px 10px ;
   display: flex;
+  letter-spacing: -8px;
 }
 
 .timer-button  button{
@@ -39,7 +40,7 @@ h1{
   display: flex;
   margin: 10px;
   font-family: 'Fredoka One', cursive;
-  border-radius: 25px;
+  border-radius: 50px;
   cursor: pointer;
   font-size: 1.1rem;
 
@@ -48,7 +49,7 @@ h1{
   display: flex;
   justify-content: center;   
   align-items: center;       
-  gap: 3px;;                
+  gap: 15px;;                
   margin-top: 16px;
 }
 
@@ -56,34 +57,33 @@ h1{
 
 /*  start button */
 #startBtn{
-  background-color: rgb(115, 200, 115);
-  color: black;
+  background-color: #27ae60;
+  color: white;
 }
 #startBtn:hover {
-  background-color: #c9ffd8;
+  filter: brightness(85%);
   transform: scale(1.07);
 }
 
 /*  pause button */
 
 #pauseBtn {
-  background-color: rgb(222, 222, 149);
-  color: black;
+  background-color: #f1c40f;
+  color: #a2a635;
 }
 #pauseBtn:hover {
-  background-color: rgb(222, 222, 149);
+  filter: brightness(85%);
   transform: scale(1.07);
 }
 
-
 /* RESET button   */
 #resetBtn {
-  background-color: #c15858;   
+  background-color: #e74c3c; /* red */
   color: white;
 }
 
 #resetBtn:hover {
-  background-color: #ffc6d5;
+  filter: brightness(90%);
   transform: scale(1.07);
 }
 
@@ -91,7 +91,6 @@ h1{
 .timer-button button:active {
   transform: scale(0.93);
 }
-
 
 /*  distraction part of the code */
 .distraction-list{
@@ -165,35 +164,34 @@ h1{
 }
 
 /* Total focus time */
-.focus-time{
-  border: none;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  border-radius: 40px;
-  padding: 30px;
-  width: 400px;
-  text-align: left;
-  position:absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-  
+.focus-time {
+  position: relative; 
+  margin: 20px auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: fit-content;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px); 
+  border-radius: 100px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.total-time{
-  color:#3E5C3D ;
-  font-size: x-large;
-}
-.session-cal{
+.total-time, .session-cal, .distraction-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #3E5C3D;
-  font-size: x-large;
-
-}
-.distraction-amount{
-  color: #3E5C3D;
-  font-size: x-large;
+  font-family: 'Times New Roman', serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-/* All the code for the tips and hack section*/
+
+/*TIPS and HACK section*/
 .tips-title {
   font-family: 'Times New Roman', Times, serif;
   color: #3E5C3D;

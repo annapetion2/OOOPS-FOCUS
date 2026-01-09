@@ -4,8 +4,8 @@
  const pauseBtn = document.getElementById("pauseBtn"); // pause button 
  const resetBtn = document.getElementById("resetBtn"); // reset button 
  const distractionDisplay = document.querySelector(".distraction-list");
-
  const distractionItem = document.querySelectorAll(".distraction-item");
+ const focusTotal = document.querySelector(".total-time");
 
 
  // the time we are starting with - 25 mn 
@@ -14,6 +14,8 @@
  let timerInterval = 0;
  let isRunning = false;
  let counterItem = 0; 
+ let totalFocus =0; // keeping track of the total focus time 
+
 
 
 // timer display 
@@ -40,6 +42,8 @@ function updateDisplay (){
     if (timeLeft > 0){
       timeLeft--;
       updateDisplay();
+      totalFocus++;
+
     }else{
       clearInterval(timerInterval);
       isRunning = false;
@@ -57,6 +61,7 @@ pauseBtn.addEventListener("click", ()=> {
   // pause the timer 
   clearInterval(timerInterval);
   isRunning = false;
+  totalFocusTime ();
 });
 
 // reset button 
@@ -67,9 +72,8 @@ resetBtn.addEventListener("click", () =>{
   // reset back to 25 mn
   timeLeft = 25 * 60;
   updateDisplay();
+  totalFocusTime ();
 })
-
-
 
 // function to make sure distraction items increments 
 function updateTotal() {
@@ -98,3 +102,13 @@ distractionItem.forEach(item => {
     increment(item); 
   });
 });
+
+
+// total time focus for the daty function 
+function totalFocusTime (){
+  // the math to get the total time 
+  const minutes = Math.floor(totalFocus / 60);
+  focusTotal.textContent = `Total Focus: ${minutes} min`;
+  
+
+}
