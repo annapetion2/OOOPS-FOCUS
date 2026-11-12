@@ -1,0 +1,261 @@
+
+:root {
+  --bg: #0e1b33;          /* dark blue background */
+  --surface: #17294a;     /* cards and buttons surface */
+  --surface-hover: #223a66;
+  --line: #2b4575;
+  --text: #eef3f8;        /* light white text */
+  --text-bright: #fafcfe; /* timer and headings */
+  --start: #2f7d57;
+  --pause: #9a7b1c;
+  --reset: #b04a40;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.2rem;
+  background-color: var(--bg);
+  color: var(--text);
+  text-align: center;
+  margin: 0;
+  padding: 24px 0 60px;
+}
+
+/* the header for the whole page */
+h1 {
+  color: var(--text-bright);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.round-timer {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 8rem;
+  font-weight: 200;
+  color: var(--text-bright);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 60px;
+  width: 300px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.4);
+  display: flex;
+  letter-spacing: -8px;
+}
+
+.status {
+  margin: 14px 0 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.timer-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+.timer-button button {
+  color: var(--text-bright);
+  width: 80px;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.15s ease, filter 0.15s ease, opacity 0.15s;
+}
+.timer-button button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* start button */
+#startBtn { background-color: var(--start); }
+/* pause button */
+#pauseBtn { background-color: var(--pause); }
+/* reset button */
+#resetBtn { background-color: var(--reset); }
+
+.timer-button button:hover:not(:disabled) { filter: brightness(110%); transform: scale(1.07); }
+/* cute press squish */
+.timer-button button:active:not(:disabled) { transform: scale(0.93); }
+
+/* distraction part */
+.distraction-list {
+  padding: 0;
+  margin: 0;
+  width: 270px;
+  position: absolute;
+  top: 180px;
+  left: 20px;
+}
+.distraction-list h2 {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  color: var(--text-bright);
+  font-size: xx-large;
+  margin: 0 0 8px 0;
+}
+.distraction-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.distraction-item:hover {
+  transform: translateY(-1px);
+  background: var(--surface-hover);
+}
+.count-val {
+  font-weight: bold;
+  color: var(--text-bright);
+  background: var(--bg);
+  padding: 2px 8px;
+  border-radius: 8px;
+  min-width: 20px;
+  text-align: center;
+  margin-left: auto;
+}
+.distraction-item.bump .count-val { animation: bump 0.25s ease; }
+@keyframes bump { 50% { transform: scale(1.25); } }
+
+/* All the focus */
+.focus-title {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  color: var(--text-bright);
+  font-size: xx-large;
+}
+
+/* Total focus time */
+.focus-time {
+  position: relative;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: fit-content;
+  padding: 20px 50px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.total-time, .distraction-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text);
+  font-family: 'Times New Roman', serif;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+/* TIPS and HACK section */
+.tips-title {
+  display: block;
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--text-bright);
+  text-align: center;
+  font-size: xx-large;
+  margin: 0 0 8px 0;
+  position: absolute;
+  top: 180px;
+  right: 20px;
+  width: 340px;
+}
+.tips-hack {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  padding: 30px;
+  width: 300px;
+  height: 300px;
+  box-sizing: content-box;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 230px;
+  right: 20px;
+}
+.tip-text {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+.tips-footer {
+  position: absolute;
+  top: 640px;
+  right: 20px;
+  width: 360px;
+  text-align: center;
+}
+.tip-source {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.link-btn {
+  padding: 8px 0;
+  border: none;
+  background: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-bright);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.link-btn:disabled { opacity: 0.4; cursor: wait; }
+
+button:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* small screens: stack the side panels under the timer */
+@media (max-width: 1000px) {
+  body { font-size: 1.6rem; }
+  .round-timer { font-size: 5rem; width: 240px; height: 160px; }
+  .distraction-list, .tips-title, .tips-hack, .tips-footer {
+    position: static;
+    margin: 24px auto 0;
+  }
+  .distraction-list { width: min(300px, 90%); }
+  .tips-title { width: auto; }
+  .tips-hack { width: min(300px, 80%); height: auto; min-height: 160px; padding: 24px; box-sizing: content-box; }
+  .tips-footer { width: auto; }
+  .focus-time { flex-direction: column; gap: 12px; padding: 20px 30px; border-radius: 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}

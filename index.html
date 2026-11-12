@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OOOPS FOCUS</title>
+  <link rel="stylesheet" href="OopsFocus.css">
+</head>
+<body>
+  <h1>OOOPS FOCUS</h1>
+
+  <div id="timer" class="round-timer">25:00</div>
+  <p id="status" class="status">Ready when you are</p>
+
+  <!-- buttons for the timer -->
+  <div class="timer-button">
+    <button id="startBtn">START</button>
+    <button id="pauseBtn" disabled>PAUSE</button>
+    <button id="resetBtn">RESET</button>
+  </div>
+
+  <!-- left side distractions list -->
+  <div class="distraction-list">
+    <h2>What pulled you away?</h2>
+
+    <button class="distraction-item" data-name="Phone">
+      Phone <span class="count-val">0</span>
+    </button>
+    <button class="distraction-item" data-name="Thoughts">
+      Thoughts <span class="count-val">0</span>
+    </button>
+    <button class="distraction-item" data-name="Hunger">
+      Hunger <span class="count-val">0</span>
+    </button>
+    <button class="distraction-item" data-name="Other">
+      Other <span class="count-val">0</span>
+    </button>
+  </div>
+
+  <!-- summary -->
+  <h3 class="focus-title">Today's Flow</h3>
+  <div class="focus-time">
+    <h4 class="total-time">Time spent focusing: 0 min</h4>
+    <h6 class="distraction-amount">Distraction(s): 0</h6>
+  </div>
+
+  <!-- tips and hacks (live from Gemini) -->
+  <h2 class="tips-title">Tips &amp; Hack</h2>
+  <div class="tips-hack">
+    <p id="tipText" class="tip-text"></p>
+  </div>
+  <div class="tips-footer">
+    <p id="tipSource" class="tip-source"></p>
+    <button id="nextTip" class="link-btn">Get a new tip</button>
+  </div>
+
+  <script src="OopsFocus.js"></script>
+</body>
+</html>
+
